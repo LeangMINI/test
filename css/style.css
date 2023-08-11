@@ -1,0 +1,405 @@
+body {
+  flex: 1;
+  font-family: "Heebo", sans-serif;
+}
+
+.container {
+  margin-top: 30px;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 600px) {
+  .nav a:not(:first-child) {
+    display: none;
+  }
+  .nav a.icon {
+    float: right;
+    display: block;
+  }
+  .main {
+    text-align: center;
+    padding: 20px 20px;
+  }
+
+  .main h1 {
+    font-size: 30px;
+  }
+
+  .btnDownlaod {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .column-detail {
+    text-align: left;
+  }
+
+  .card-feature img {
+    max-width: 100%;
+  }
+
+  .card-feature {
+    margin-bottom: 10px;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .card-titler {
+    text-align: center;
+  }
+  .card-desc {
+    text-align: center;
+  }
+  .btn {
+    align-self: center;
+    margin-left: 20px;
+  }
+  .inline-title {
+    text-align: center;
+    display: flex;
+  }
+  .main-blog {
+    align-items: center;
+  }
+  .container {
+    padding: 10px;
+  }
+  .inline-right {
+    display: none !important;
+  }
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .card-image {
+    max-width: 100%;
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+}
+
+.nav {
+  overflow: hidden;
+  background-color: white;
+  margin-left: 70%;
+  font-weight: bold;
+}
+
+.nav a {
+  float: right;
+  color: #21243d;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 30px;
+}
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav .icon {
+  display: none;
+}
+
+.card-feature {
+  margin-bottom: 10px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.card-feature img {
+  max-width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .nav.responsive {
+    position: relative;
+  }
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.main {
+  align-items: center;
+  background-color: white;
+}
+
+.main h1 {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 44px;
+  margin-right: 40px;
+}
+
+.btnDownlaod {
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  border: 0;
+  border-radius: 5px;
+  background-color: rgb(244, 97, 98);
+  color: #ffffff;
+}
+
+.profile {
+  float: right;
+  padding: 20px, 20px 20px;
+  margin-bottom: 50px;
+}
+
+.post {
+  align-items: center;
+  background-color: #eef7fa;
+  padding: 50px 50px;
+}
+
+.post a {
+  float: left;
+  text-decoration: none;
+  margin-top: 10;
+}
+
+.column {
+  float: left;
+  width: 30%;
+  display: flex;
+  margin-bottom: 70px;
+  margin-top: 30px;
+  padding: 10px;
+  align-self: center;
+}
+
+.row {
+  margin-top: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  border-radius: 10px;
+  padding: 50px;
+  text-align: center;
+  background-color: white;
+  align-self: center;
+}
+
+.card h1,
+p {
+  background-color: white;
+  color: black;
+  margin-top: 0px;
+}
+
+.section-footer {
+  align-items: center;
+  background-color: white;
+  padding: 50px 50px;
+  height: 100px;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: ;
+}
+
+footer a {
+  padding: 10px 10px;
+}
+
+.cardname {
+  text-align: center;
+  padding: 27px 27px;
+}
+
+.card-feature {
+  display: flex;
+  background-color: white;
+  border-bottom: 1.5px solid #e0e0e0; 
+}
+
+.card-image {
+  max-width: 100%;
+  align-self: flex-start;
+
+  border-radius: 10px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.column-detail {
+  flex: 1;
+  text-align: left;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 24px;
+}
+.card-titler {
+  margin: 0;
+  font-size: 35px;
+}
+
+.inline-pill {
+  background-color: #172951;
+  border-radius: 20px;
+  width: 60px;
+  color: white;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 15px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.inline-gray {
+  color: gray;
+  margin-left: 15px;
+  display: inline;
+}
+
+.card-desc {
+  margin-top: 10px;
+}
+
+.inline-title {
+  display: inline-block;
+  color: #21243d;
+}
+
+.inline-right {
+  display: inline;
+  color: rgb(59, 169, 206);
+}
+
+.header-post {
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 22px;
+}
+.header-post a {
+  text-align: center;
+  float: right;
+  text-decoration: none;
+  font-size: 22px;
+}
+.header-post p {
+  text-align: center;
+  float: left;
+  background-color: #eef7fa;
+  font-size: 22px;
+}
+
+.inline-year {
+  color: black;
+  display: inline-block;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.main-blog {
+  width: 90%;
+}
+.main-blog-detail {
+  padding: 70px;
+}
+.main-wrok-detail {
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.shadow {
+  filter: drop-shadow(0px 8px 5px #78b7cc);
+  border-radius: 50%;
+  
+  
+}
+
+.box {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.flex-item-left {
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-right {
+  padding: 10px;
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media screen and (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+.card-post {
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  align-self: center;
+}
+.work {
+  background-color: #eef7fa;
+  padding: 50px 250px 50px 250px;
+}
+
+@media screen and (max-width: 600px) {
+  .work {
+    background-color: #eef7fa;
+    padding: 1px;
+  }
+}

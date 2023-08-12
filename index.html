@@ -3,18 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <style>
-        body {
-            flex: 1;
-            font-family: "Heebo", sans-serif;
+        * {
+            box-sizing: border-box;
         }
 
-        .container {
-            max-width: 100%;
-            margin: 0 auto;
-            background-color: #ffffff;
+        .row::after {
+            content: "";
+            clear: both;
+            display: block;
+
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        html {
+            font-family: "Lucida Sans", sans-serif;
+        }
+
+        .header {
+            background-color: #9933cc;
+            color: #ffffff;
+            padding: 15px;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: #33b5e5;
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .menu li:hover {
+            background-color: #0099cc;
+        }
+
+        .aside {
+            background-color: #33b5e5;
+            padding: 15px;
+            color: #ffffff;
+            text-align: center;
+            font-size: 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .footer {
+            background-color: #0099cc;
+            color: #ffffff;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+        }
+
+        /* For desktop: */
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            /* For mobile phones: */
+            [class*="col-"] {
+                width: 100%;
+            }
+
+            .nav a:not(:first-child) {
+                display: none;
+            }
+
+            .nav a.icon {
+                float: right;
+                display: block;
+            }
+
+            .nav.responsive {
+                position: relative;
+            }
+
+            .nav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .nav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .card {
+                border-radius: 10px;
+                padding: 10px;
+                text-align: center;
+                background-color: white;
+                align-self: center;
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .post {
+                padding: 2px;
+            }
+        }
+
+        .post {
+            background-color: #eef7fa;
+            padding: 90px;
+        }
+
+        .feature {
+            background-color: white;
+            padding: 90px;
         }
 
         .nav {
@@ -43,125 +204,170 @@
             display: none;
         }
 
-
-        /* .main {
-            max-width: 100%;
-            margin: 0 auto;
-            background-color: #ddd;
-        } */
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: auto auto auto;
-            background-color: #2196F3;
-            padding: 10px;
-            align-content: center;
-        }
-
-        .grid-item{
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(0, 0, 0, 0.8);
+        .card {
+            border-radius: 10px;
             padding: 20px;
-            font-size: 30px;
             text-align: center;
-            justify-self: center;
-        }
-        .grid-item {
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            font-size: 30px;
-            text-align: center;
-            justify-self: center;
-        }
-
-        @media screen and (max-width: 600px) {
-            .nav a:not(:first-child) {
-                display: none;
-            }
-
-            .nav a.icon {
-                float: right;
-                display: block;
-            }
-
-            .nav.responsive {
-                position: relative;
-            }
-
-            .nav.responsive .icon {
-                position: absolute;
-                right: 0;
-                top: 0;
-            }
-
-            .nav.responsive a {
-                float: none;
-                display: block;
-                text-align: left;
-            }
+            background-color: white;
+            align-self: center;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="nav" id="myTopnav">
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-            <a href="">Contact</a>
-            <a href="blog.html"> Blog</a>
-            <a href="works.html">Works</a>
-            <a href="index.html" style="color: #FF6464;">Home</a>
-        </div>
-        <div class="main">
-
-            <section class="grid-container">
-                
-                <div class="grid-item ">
-                    <h3 class="card-title" style="color: #21243D; ">Hi, I am John,
-                        <br>Creative Technologist
-                    </h3>
-                    <div class="card-desc">
-                        <p style="color: #21243D;">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                            sint.
-                            <br>
-                            Velit officia consequat
-                            duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                        </p>
-                    </div>
+    <div class="nav" id="myTopnav">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="">Contact</a>
+        <a href="blog.html"> Blog</a>
+        <a href="works.html">Works</a>
+        <a href="index.html" style="color: #FF6464;">Home</a>
+    </div>
+    <section style="background-color:#FF6464 ; padding: 90px;">
+        <div class="row">
+            <div class="col-6">
+                <h3 class="card-titler" style="color: #21243D; ">Hi, I am John,
+                    <br>Creative Technologist
+                </h3>
+                <div class="card-desc">
+                    <p style="color: #21243D;">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+                        sint. <br>
+                        Velit officia consequat
+                        duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+                <div class="col-8">
                     <div class="btn">
                         <button class="btnDownlaod">Download Resume</button>
                     </div>
-                    
-                </div>
-                <div >
-                    <img src="/img/profile.png" class="grid-item " alt="">
                 </div>
 
-            </section>
+            </div>
+            <div class="col-6">
+                <div class="aside">
+                    <div class="profile">
+                        <img src="/img/profile.png" class="shadow" alt="">
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="post">
+        <div class="row">
+            <div class="col-6" style="text-align: center;">
+                <p>Recent Posts</p>
+            </div>
+            <div class="col-6" style="text-align: center; text-decoration: none;">
+                <a href="">View All</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <h1 style="color: #21243D;">Making a design system from scratch</h1>
+                    <p style="color: #21243D;"> 12 Feb 2020 | Design, Pattern</p>
+                    <br>
+                    <p style="color: #21243D;">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+                        sint. Velit officia
+                        consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <h1 style="color: #21243D;">Making a design system from scratch</h1>
+                    <p style="color: #21243D;"> 12 Feb 2020 | Design, Pattern</p>
+                    <br>
+                    <p style="color: #21243D;">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+                        sint. Velit officia
+                        consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feature">
+        <div class="row">
+            <div class="col-2" style="text-align: center;">
+                <p>Feature Works</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <img src="/img/Rectangle 30.png" alt="" class="card-image">
+            </div>
+            <div class="col-8">
+                <h3 class="card-title" style="color: #21243D;">Designing Dashboards</h3>
+                <p class="inline-pill">2020</p>
+                <p class="inline-gray">Dashboard</p>
+                <div class="card-desc">
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                        consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <img src="/img/Rectangle 32.png" alt="" class="card-image">
+            </div>
+            <div class="col-8">
+                <h3 class="card-title" style="color: #21243D;">Vibrant Portraits of 2020</h3>
+                <p class="inline-pill">2018</p>
+                <p class="inline-gray">Illustration</p>
+                <div class="card-desc">
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                        consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <img src="/img/Rectangle 34.png" alt="" class="card-image">
+            </div>
+            <div class="col-8">
+                <h3 class="card-title" style="color: #21243D;">36 Days of Malayalam Type</h3>
+                <p class="inline-pill">2018</p>
+                <p class="inline-gray">Typography</p>
+                <div class="card-desc">
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                        consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div>
+            <a href=""><i class="fa fa-facebook-official" style="font-size:48px;color:#172951"></i></a>
+            <a href=""><i class="fa fa-instagram" style="font-size:48px;color:#172951"></i></a>
+            <a href=""><i class="fa fa-twitter" style="font-size:48px;color:#172951"></i></a>
+
+            <a href=""><i class="fa fa-linkedin-square" style="font-size:48px;color:#172951"></i></a>
+            
         </div>
 
+        <div>
+            <p>Copyright ©2020 All rights reserved </p>
+        </div>
+    </footer>
+   
 
-
-
-
+    <div class="footer">
+        <p>Resize the browser window to see how the content respond to the resizing.</p>
     </div>
+    </section>
 
 
 
 
-    <script>
-        function myFunction() {
+
+
+    <script>function myFunction() {
             var x = document.getElementById("myTopnav");
             if (x.className === "nav") {
                 x.className += " responsive";
             } else {
                 x.className = " nav";
             }
-        }
-    </script>
+        }</script>
 </body>
 
 </html>
